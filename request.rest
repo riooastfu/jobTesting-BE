@@ -1,0 +1,58 @@
+GET http://localhost:5000/pegawai
+
+###
+GET http://localhost:5000/pegawai/1207210208000001
+
+###
+POST http://localhost:5000/pegawai
+Content-Type: application/json
+
+{
+    "nik": "1289900710990021",
+    "nama": "Arif Reza",
+    "tempat_lahir": "Bandung",
+    "tgl_lahir": "1 Mei 1999",
+    "departemen": "IT",
+    "pt": "PT. X",
+    "lokasi_kerja": "Jakarta"               
+}
+
+###
+PATCH http://localhost:5000/pegawai/1289900710990002
+Content-Type: application/json
+
+{
+    "nama": "Arif Beti"            
+}
+
+###
+PATCH http://localhost:5000/dt_pegawai/1289900710990002
+Content-Type: application/json
+
+{
+    "lokasi_kerja": "Bali",
+    "pt": "PT. Mencari Cinta Sejati"          
+}
+
+###
+DELETE  http://localhost:5000/dt_pegawai/1289900710996161
+
+###
+DELETE  http://localhost:5000/pegawai/1289900710996161
+
+###
+GET http://localhost:5000/pegawai/:Arif Muhammad
+
+###
+POST http://localhost:5000/dt_pegawai
+Content-Type: application/json
+
+{
+    "nama": "Annes",
+    "nik": "1289900710990021",
+    "ttl": "Bandung 1 Mei 1999",
+    "departemen": "IT",
+    "pt": "PT. X",
+    "lokasi_kerja": "Jakarta"        
+}
+
